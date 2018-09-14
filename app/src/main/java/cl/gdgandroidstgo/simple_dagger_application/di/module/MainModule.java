@@ -30,14 +30,14 @@ public class MainModule {
 
     @Provides
     @IntoMap
-    @IntKey(VIEW_TYPE_ONLY_BREED)
+    @BreedViewHolderProvider.ProviderKey(VIEW_TYPE_ONLY_BREED)
     public BreedViewHolderProvider provideViewHolderProvider() {
         return BreedViewHolder::new;
     }
 
     @Provides
     @IntoMap
-    @IntKey(VIEW_TYPE_BREED_WITH_SUB_BREED)
+    @BreedViewHolderProvider.ProviderKey(VIEW_TYPE_BREED_WITH_SUB_BREED)
     public BreedViewHolderProvider provideVViewHolderProvierOther() {
         return BreedWithSubBreedViewHolder::new;
     }
